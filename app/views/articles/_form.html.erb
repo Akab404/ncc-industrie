@@ -1,0 +1,7 @@
+  <%= simple_form_for article do |f| %>
+    <%= f.input :titre %>
+    <%= f.input :content, as: :rich_text_area %>
+    <%= f.input :publication_date %>
+    <%= f.input :category %>
+    <%= f.button :submit %>
+  <% end %>

@@ -1,0 +1,14 @@
+<div class="container">
+
+  <h1><%= @article.titre %></h1>
+
+  <p><%= @article.publication_date %></p>
+
+  <p><%= @article.category %></p>
+
+  <p><%= @article.content %></p>
+
+  <%= link_to "Modifier cet article", edit_article_path(@article)%>
+  <%= link_to "Supprimer cet article", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Vraiment?"} %>
+
+</div>

@@ -1,0 +1,16 @@
+<h1>Articles list</h1>
+
+  <div class="card-article">
+    <div class="titre-article">
+      <% @articles.each do |article| %>
+        <%= link_to article_path(article), class: "card-article-link" do %>
+          <div class="card-article-content">
+            <p><%= article.titre %></p>
+            <p><%= article.publication_date  %></p>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+
+    <%= link_to "Ajouter un article", new_article_path %>
+  </div>
