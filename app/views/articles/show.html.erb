@@ -8,7 +8,10 @@
 
   <p><%= @article.content %></p>
 
-  <%= link_to "Modifier cet article", edit_article_path(@article)%>
-  <%= link_to "Supprimer cet article", article_path(@article), data: {turbo_method: :delete, turbo_confirm: "Vraiment?"} %>
+  <% if policy(@article).edit? %>
+    <%= link_to "Modifier cet article", edit_article_path(@article)%>
+  <% end %>
+
+  <%= link_to "Supprimer cet article", @article, method: :delete if policy(@article).destroy? %>
 
 </div>

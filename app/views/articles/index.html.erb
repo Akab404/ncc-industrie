@@ -12,5 +12,5 @@
       <% end %>
     </div>
 
-    <%= link_to "Ajouter un article", new_article_path %>
+    <%= link_to "Ajouter un article", new_article_path if policy(Article).new? %>
   </div>
