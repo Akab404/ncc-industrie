@@ -27,7 +27,9 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Nos expertises
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+             <%= link_to "Action", "#", class: "dropdown-item" %>
+              <%= link_to "Another action", "#", class: "dropdown-item" %>
             <a class="dropdown-item" href="#">Industries</a>
             <a class="dropdown-item" href="#">Recherche</a>
             <a class="dropdown-item" href="#">Programmation</a>
@@ -43,7 +45,7 @@
             <%= image_tag "https://res.cloudinary.com/dic3crqze/image/upload/v1712570562/ncc/NCC_logo_s6bp3d.png", class: "avatar", alt: "dropdown menu" %>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Ajouter une actualité", "#", class: "dropdown-item" %>
+              <%= link_to "Ajouter une actualité", new_article_path, class: "dropdown-item" %>
               <%= link_to "Ajouter une offre d'emploi", "#", class: "dropdown-item" %>
               <%= link_to "Ajouter une réalisation", "#", class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" %>

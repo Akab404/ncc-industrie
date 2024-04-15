@@ -4,6 +4,9 @@ class PagePolicy < ApplicationPolicy
     def resolve
       scope.all
     end
-  end
 
+    def index?
+      true
+    end
+  end
 end

@@ -29,8 +29,8 @@ gem "jbuilder"
 # Devise for Users
 gem "devise"
 
-# Pundit for authorization
-gem "pundit"
+# Cloudinary for medias
+gem "cloudinary"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
@@ -48,7 +48,7 @@ gem "tzinfo-data", platforms: %i[ windows jruby ]
 gem "bootsnap", require: false
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
 
 gem "bootstrap", "~> 5.2"
 gem "autoprefixer-rails"

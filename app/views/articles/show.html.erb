@@ -1,3 +1,5 @@
+  <%= cl_image_tag @article.cover_image.key, class:"w-100" if @article.cover_image.attached?%>
+
 <div class="container">
 
   <h1><%= @article.titre %></h1>
@@ -8,10 +10,15 @@
 
   <p><%= @article.content %></p>
 
-  <% if policy(@article).edit? %>
+  <p><% @article.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <%end %>
+  </p>
+
+  <% if user_signed_in? %>
     <%= link_to "Modifier cet article", edit_article_path(@article)%>
   <% end %>
 
-  <%= link_to "Supprimer cet article", @article, method: :delete if policy(@article).destroy? %>
+  <%= link_to "Supprimer cet article", @article, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} if user_signed_in?%>
 
 </div>

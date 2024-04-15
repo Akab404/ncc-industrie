@@ -26,5 +26,8 @@ $border-radius-xl:            .5rem;
 $border-radius-xxl:           1rem;
 
 // Override other variables below!
-$light-rgb: $white;
-$light:     $white;
+$light-rgb:           $white;
+$light:               $white;
+$alert-bg:            $primary;
+$alert-border-color: $primary;
+$alert-color:         $white;

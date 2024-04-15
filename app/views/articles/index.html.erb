@@ -5,6 +5,7 @@
       <% @articles.each do |article| %>
         <%= link_to article_path(article), class: "card-article-link" do %>
           <div class="card-article-content">
+            <p><%= cl_image_tag article.cover_image.key if article.cover_image.attached? %></p>
             <p><%= article.titre %></p>
             <p><%= article.publication_date  %></p>
           </div>
@@ -12,5 +13,5 @@
       <% end %>
     </div>
 
-    <%= link_to "Ajouter un article", new_article_path if policy(Article).new? %>
+    <%= link_to "Ajouter un article", new_article_path if user_signed_in? %>
   </div>
