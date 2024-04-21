@@ -1,0 +1,41 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-12">
+      <h1><%= @offer.titre %></h1>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-12 col-lg-4">
+      <h2>Résumé de l'offre</h2>
+      <p><%= @offer.geolocalisation %></p>
+      <p><%= @offer.job_type %></p>
+      <p><%= @offer.starting_date.strftime("%d/%m/%Y") %></p>
+      <p><%= @offer.salary %></p>
+    </div>
+
+    <div class="col-12 col-lg-8">
+      <h2>Description du poste</h2>
+      <p><%= @offer.job_description %></p>
+
+      <h2>Profil recherché</h2>
+      <p><%= @offer.candidate_profil %></p>
+
+    <% if user_signed_in? %>
+      <div class="d-flex gap-3 w-100 mt-5">
+        <div class="modify-offer">
+          <%= link_to edit_job_offer_path(@offer) do %>
+            <span class="btn btn-outline-primary">Modifier cette offre</span>
+          <% end %>
+        </div>
+        <div class="delete-offer">
+          <%= link_to @offer, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} do %>
+            <span class="btn btn-outline-secondary">Supprimer cette offre</span>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+
+    </div>
+  </div>
+</div>

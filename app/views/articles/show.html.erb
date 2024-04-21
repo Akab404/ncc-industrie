@@ -2,6 +2,7 @@
 
 <div class="container">
 
+
   <h1><%= @article.titre %></h1>
 
   <p><%= @article.publication_date %></p>
@@ -17,8 +18,8 @@
 
   <% if user_signed_in? %>
     <%= link_to "Modifier cet article", edit_article_path(@article)%>
+    <%= link_to "Supprimer cet article", @article, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
   <% end %>
 
-  <%= link_to "Supprimer cet article", @article, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} if user_signed_in?%>
 
 </div>

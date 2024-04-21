@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
   get "admin", to: "pages#admin"
 
+  resources :job_offers
+
   resources :articles do
     resource :cover_image, only: [:destroy], module: :articles
   end

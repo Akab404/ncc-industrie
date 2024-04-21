@@ -1,0 +1,17 @@
+<div class="form-controller" data-controller="trix-config">
+  <%= simple_form_for job_offer do |f| %>
+    <%= f.input :titre %>
+    <%= f.input :job_description, as: :rich_text_area %>
+    <%= f.input :candidate_profil,
+                as: :rich_text_area,
+                input_html: { data: { "trix-config-target": "editor" } } %>
+    <%= f.input :geolocalisation %>
+    <%= f.input :job_type, collection:JobOffer::JOB_TYPE %>
+    <%= f.input :starting_date,
+                  as: :string,
+                  input_html: { data: { controller: "datepicker" } } %>
+    <%= f.input :salary %>
+    <%= f.input :publish %>
+    <%= f.button :submit, class:"btn btn-primary" %>
+  <% end %>
+</div>
