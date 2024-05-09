@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   resources :job_offers
 
+  resources :projects
+
   resources :articles do
     resource :cover_image, only: [:destroy], module: :articles
   end

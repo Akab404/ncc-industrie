@@ -1,2 +1,14 @@
 <h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<p>présentation de NCC </p>
+
+
+
+<h1>Nos dernières actualités :</h1>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <h1><%= article.titre %></h1>
+      <p><%= article.publication_date %></p>
+    </li>
+  <% end %>
+</ul>

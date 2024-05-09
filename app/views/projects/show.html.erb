@@ -1,0 +1,15 @@
+<div class="container">
+
+
+  <h1><%= @project.title %></h1>
+  <p><%= @project.content_problematic %></p>
+  <p><%= @project.content_solution %></p>
+
+
+  <% if user_signed_in? %>
+    <%= link_to "Modifier cet article", edit_project_path(@project)%>
+    <%= link_to "Supprimer cet article", @project, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <% end %>
+
+
+</div>

@@ -1,0 +1,21 @@
+<div class="form-controller form-check form-switch" data-controller="trix-config">
+  <% if project.cover_image.attached? %>
+    <div id="<%= dom_id(project, :cover_image) %>">
+      <%= cl_image_tag project.cover_image.key%>
+      <%= link_to "Remove cover image", project_cover_image_path(project), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+    </div>
+    <% end %>
+  <%= simple_form_for project do |f| %>
+    <%= f.input :title %>
+    <%= f.input :category, collection:Project::CATEGORY_PROJECT %>
+    <%= f.input :content_problematic,
+                as: :rich_text_area,
+                input_html: { data: { "trix-config-target": "editor" } } %>
+    <%= f.input :content_solution,
+                as: :rich_text_area,
+                input_html: { data: { "trix-config-target": "editor" } } %>
+    <%= f.input :publish, class: "form-check-input" %>
+
+    <%= f.button :submit, class:"btn btn-primary" %>
+  <% end %>
+</div>
