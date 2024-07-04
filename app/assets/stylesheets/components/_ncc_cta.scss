@@ -1,8 +1,41 @@
 .ncc-cta{
-  padding: 6px 36px;
+  padding: 8px 40px;
   color:white;
   font-size: 16px;
   border-radius: 36px;
+  border: solid 2px rgb(10,24,145);
   background: rgb(10,24,145);
   background: linear-gradient(45deg, rgba(10,24,145,1) 0%, rgba(9,17,97,1) 100%);
+  transition: all 0.4s cubic-bezier(0.75, 0, 0.30, 1) ;
+
 }
+.ncc-cta:hover{
+  background:white;
+  color: rgb(10,24,145);
+  border: solid 2px rgb(10,24,145);
+  box-shadow: rgba(175, 114, 216, 0.3) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+.ncc-cta:hover i{
+  transform: rotate(0) scale(1);
+  color: white;
+  background-color: rgb(10, 24, 145);
+  font-size: 10px;
+  padding: 5px;
+  margin-left: 30px;
+}
+.right-arrow i{
+  color:white;
+  background-color: white;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+  font-size: 18px;
+  margin-left: 15px;
+  transform: scale(0.2) rotate(-45deg);
+  transition: all 0.8s cubic-bezier(0.75, 0, 0.30, 1) ;
+}
+
+a{text-decoration: none;}

@@ -1,1 +1,59 @@
 // Specific CSS for your home-page
+.hero-section{
+  background-image:
+    linear-gradient(to bottom, rgba(9, 17, 87, 1), rgba(10, 24, 145, 1));
+  width: 100%;
+  min-height:calc(90vh - 100px);
+  background-size: cover;
+  color:white;
+
+}
+.hero-section h1{
+  font-weight: 200;
+  font-size: 8vw;
+  text-transform: uppercase;
+  line-height: 100%;
+}
+.hero-section h3{
+  font-weight: 200;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  padding: 43px 0;
+}
+.hero-background{
+  background-image: url("https://res.cloudinary.com/dic3crqze/image/upload/v1719174987/plus_bckgrnd_kjyegx.png");
+  width: 100%;
+  height:100%;
+  background-size: cover;
+
+}
+.hero-text-section{
+  margin:0 10% 10% 10%;
+}
+.screws{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  opacity: 0.8;
+}
+
+.screws .screw-class svg{
+  width:48px;
+}
+.bloc-expertise-image{
+  max-height: 450px;
+  overflow: hidden;
+}
+
+
+.bloc-expertise-image img{
+  object-fit: cover;
+  width: 100%;
+}
+
+.blocs-expertise{
+  background-image: url("https://res.cloudinary.com/dic3crqze/image/upload/v1720080049/dot-grid_1_fh9ch2.jpg");
+}
+.bloc-expertise{
+  padding:50px 0;
+}

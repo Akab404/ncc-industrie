@@ -1,14 +1,16 @@
-<h1>Nous rejoindre</h1>
+<div class="container">
+  <h1>Nous rejoindre</h1>
 
- <div class="card-job">
-    <div class="titre-job">
-      <% @offers.each do |offer| %>
-        <%= link_to job_offer_path(offer), class: "card-offer-link" do %>
-          <div class="card-article-content">
-            <p><%= offer.titre %></p>
-          </div>
+   <div class="card-job">
+      <div class="titre-job">
+        <% @offers.each do |offer| %>
+          <%= link_to job_offer_path(offer), class: "card-offer-link" do %>
+            <div class="card-article-content">
+              <p><%= offer.titre %></p>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
 
-<%= link_to "Ajouter une offre d'emploi", new_job_offer_path, class:"btn btn-primary" if user_signed_in? %>
+  <%= link_to "Ajouter une offre d'emploi", new_job_offer_path, class:"btn btn-primary" if user_signed_in? %>
+</div>

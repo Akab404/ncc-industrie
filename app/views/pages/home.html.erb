@@ -1,14 +1,98 @@
-<h1>Pages#home</h1>
-<p>présentation de NCC </p>
+
+<div class="hero-section">
+  <div class="hero-background">
+    <div class="container">
+      <div class="screws">
+        <%= render "shared/screw" %>
+        <%= render "shared/screw" %>
+      </div>
+      <div class="hero-text-section">
+        <h3>NCC // Nucléaire  Conception Calculs</h3>
+        <h1>Calculs spécialisées</h1>
+        <p>Nous sommes dédiés à fournir des services hautement spécialisés dans les domaines de l'INDUSTRIE, de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="blocs-expertise">
+  <div class="container">
+
+    <div class="bloc-expertise">
+      <div class="row">
+
+        <div class="bloc-expertise-image col-12 col-lg-6">
+          <%= cl_image_tag("tuyaux_yktgjc.png", class:"bloc-expertise-image-bckgrnd")%>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="bloc-expertise-content col-12 col-lg-5">
+          <h2>Industrie</h2>
+          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.</p>
+          <p>De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          <%= render "shared/cta_primary" %>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="bloc-expertise">
+      <div class="row">
+        <div class="bloc-expertise-content col-12 col-lg-5">
+          <h2>Recherche</h2>
+          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.</p>
+          <p>De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          <%= render "shared/cta_primary" %>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="bloc-expertise-image col-12 col-lg-6">
+          <%= cl_image_tag("tuyaux_yktgjc.png", class:"bloc-expertise-image-bckgrnd")%>
+        </div>
+      </div>
+    </div>
+    <div class="bloc-expertise">
+
+      <div class="row">
+        <div class="bloc-expertise-image col-12 col-lg-6">
+          <%= cl_image_tag("tuyaux_yktgjc.png", class:"bloc-expertise-image-bckgrnd")%>
+        </div>
+        <div class="col-lg-1"></div>
+
+        <div class="bloc-expertise-content col-12 col-lg-5">
+          <h2>Programmation</h2>
+          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.</p>
+          <p>De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          <%= render "shared/cta_primary" %>
+        </div>
+      </div>
+
+    </div>
+    <div class="bloc-expertise">
+      <div class="row">
+        <div class="bloc-expertise-content col-12 col-lg-5">
+          <h2>Qualification</h2>
+          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.</p>
+          <p>De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          <%= render "shared/cta_primary" %>
+        </div>
+                <div class="col-lg-1"></div>
+
+        <div class="bloc-expertise-image col-12 col-lg-6">
+          <%= cl_image_tag("tuyaux_yktgjc.png", class:"bloc-expertise-image-bckgrnd")%>
+        </div>
+            </div>
+      </div>
+  </div>
+</div>
+<div class="container">
 
 
-
-<h1>Nos dernières actualités :</h1>
-<ul>
-  <% @articles.each do |article| %>
-    <li>
-      <h1><%= article.titre %></h1>
-      <p><%= article.publication_date %></p>
-    </li>
-  <% end %>
-</ul>
+  <h1>Nos dernières actualités :</h1>
+  <ul>
+    <% @articles.each do |article| %>
+      <li>
+        <h1><%= article.titre %></h1>
+        <p><%= article.publication_date %></p>
+      </li>
+    <% end %>
+  </ul>
+</div>

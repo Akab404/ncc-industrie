@@ -1,17 +1,19 @@
-<h1>Nos réalisations</h1>
+<div class="container">
+  <h1>Nos réalisations</h1>
 
 
-<div class="card-project">
-    <div class="titre-project">
-      <% @projects.each do |project| %>
-        <%= link_to project_path(project), class: "card-project-link" do %>
-          <div class="card-project-content">
-            <p><%= project.title %></p>
-            <p><%= project.category  %></p>
-          </div>
+  <div class="card-project">
+      <div class="titre-project">
+        <% @projects.each do |project| %>
+          <%= link_to project_path(project), class: "card-project-link" do %>
+            <div class="card-project-content">
+              <p><%= project.title %></p>
+              <p><%= project.category  %></p>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
+      </div>
 
-    <%= link_to "Ajouter une réalisation", new_article_path, class:"btn btn-primary" if user_signed_in? %>
-  </div>
+      <%= link_to "Ajouter une réalisation", new_article_path, class:"btn btn-primary" if user_signed_in? %>
+    </div>
+</div>

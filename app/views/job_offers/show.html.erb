@@ -7,11 +7,14 @@
   </div>
   <div class="row mt-5">
     <div class="col-12 col-lg-4">
-      <h2>Résumé de l'offre</h2>
-      <p><%= @offer.geolocalisation %></p>
-      <p><%= @offer.job_type %></p>
-      <p><%= @offer.starting_date.strftime("%d/%m/%Y") %></p>
-      <p><%= @offer.salary %></p>
+      <div class="job-offer-resume">
+        <h2>Résumé de l'offre</h2>
+        <p><%= @offer.geolocalisation %></p>
+        <p><%= @offer.job_type %></p>
+        <p><%= @offer.starting_date.strftime("%d/%m/%Y") %></p>
+        <p><%= @offer.salary %></p>
+      </div>
+
     </div>
 
     <div class="col-12 col-lg-8">
