@@ -22,13 +22,14 @@
       <div class="row">
 
         <div class="bloc-expertise-image col-12 col-lg-6">
-          <%= cl_image_tag("tuyaux_yktgjc.png", class:"bloc-expertise-image-bckgrnd")%>
+          <img class="bloc-expertise-image-bckgrnd" src="https://res.cloudinary.com/dic3crqze/image/upload/v1720165912/tuyaux-gradient_xozths.png">
         </div>
         <div class="col-lg-1"></div>
         <div class="bloc-expertise-content col-12 col-lg-5">
           <h2>Industrie</h2>
-          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.</p>
-          <p>De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.
+          <br/><br/>
+          De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
           <%= render "shared/cta_primary" %>
 
         </div>
@@ -39,13 +40,14 @@
       <div class="row">
         <div class="bloc-expertise-content col-12 col-lg-5">
           <h2>Recherche</h2>
-          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.</p>
-          <p>De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.
+          <br/><br/>
+          De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
           <%= render "shared/cta_primary" %>
         </div>
         <div class="col-lg-1"></div>
         <div class="bloc-expertise-image col-12 col-lg-6">
-          <%= cl_image_tag("tuyaux_yktgjc.png", class:"bloc-expertise-image-bckgrnd")%>
+          <img class="bloc-expertise-image-bckgrnd" src="https://res.cloudinary.com/dic3crqze/image/upload/v1720165913/qualificaztion-gradient_r9y4pn.png">
         </div>
       </div>
     </div>
@@ -53,14 +55,15 @@
 
       <div class="row">
         <div class="bloc-expertise-image col-12 col-lg-6">
-          <%= cl_image_tag("tuyaux_yktgjc.png", class:"bloc-expertise-image-bckgrnd")%>
+          <img class="bloc-expertise-image-bckgrnd" src="https://res.cloudinary.com/dic3crqze/image/upload/v1720165912/programmation-gradient_acucs8.png">
         </div>
         <div class="col-lg-1"></div>
 
         <div class="bloc-expertise-content col-12 col-lg-5">
           <h2>Programmation</h2>
-          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.</p>
-          <p>De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.
+          <br/><br/>
+          De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
           <%= render "shared/cta_primary" %>
         </div>
       </div>
@@ -70,14 +73,15 @@
       <div class="row">
         <div class="bloc-expertise-content col-12 col-lg-5">
           <h2>Qualification</h2>
-          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.</p>
-          <p>De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.
+          <br/><br/>
+          De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
           <%= render "shared/cta_primary" %>
         </div>
                 <div class="col-lg-1"></div>
 
         <div class="bloc-expertise-image col-12 col-lg-6">
-          <%= cl_image_tag("tuyaux_yktgjc.png", class:"bloc-expertise-image-bckgrnd")%>
+          <img class="bloc-expertise-image-bckgrnd" src="https://res.cloudinary.com/dic3crqze/image/upload/v1720165913/qualificaztion-gradient_r9y4pn.png">
         </div>
             </div>
       </div>
@@ -86,13 +90,32 @@
 <div class="container">
 
 
-  <h1>Nos dernières actualités :</h1>
-  <ul>
-    <% @articles.each do |article| %>
-      <li>
-        <h1><%= article.titre %></h1>
-        <p><%= article.publication_date %></p>
-      </li>
-    <% end %>
-  </ul>
+  <div class="home-bloc-actualites">
+    <h1>Nos dernières actualités :</h1>
+      <ul>
+    <div class="row gx-3">
+        <% @articles.each do |article| %>
+          <div class="bloc-post col-12 col-lg-4">
+              <div class="post-card">
+                <%= link_to article_path(article), class: "card-article-link" do %>
+                  <%= cl_image_tag article.cover_image.key, class:"cover-image" if article.cover_image.attached?%>
+                  <div class="card-article-content">
+                    <div class="card-article-category"><%= article.category %></div>
+                    <h3 class="mt-5"><%= article.titre %></h3>
+                    <p>Publié le <%= article.publication_date  %></p>
+                    <p class="mb-3">Morbi sapien metus, volutpat nec sollicitudin sit amet, auctor eu urna. Morbi eget tempor velit. Donec tempus sem sed sagittis tristique. Vivamus pulvinar sem et mollis facilisis. Morbi sed augue risus. Integer a nibh ullamcorper tortor mattis dignissim.</p>
+                    <div class="ncc-cta col-7 mb-3">
+                      Lire la suite <span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>
+                    </div>
+                  </div>
+                <% end %>
+              </div>
+
+          </div>
+        <% end %>
+    </div>
+      </ul>
+  </div>
+
+
 </div>

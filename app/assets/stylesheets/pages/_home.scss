@@ -57,3 +57,22 @@
 .bloc-expertise{
   padding:50px 0;
 }
+
+.bloc-expertise-content  h2{
+  font-size: 3rem;
+}
+
+.bloc-expertise-content  p{
+  padding:35px 0;
+}
+
+.home-bloc-actualites ul{
+  margin: 0;
+  padding:0;
+}
+.home-bloc-actualites ul li{
+  list-style: none;
+  background-color: white;
+  border-radius: $border-radius-xl;
+  padding: 3rem;
+}
