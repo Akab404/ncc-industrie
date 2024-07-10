@@ -1,9 +1,14 @@
-  <%= cl_image_tag @article.cover_image.key, class:"w-100" if @article.cover_image.attached?%>
+
+  <div class="article-intro-section">
+    <%= cl_image_tag @article.cover_image.key, class:"w-100 article-cover-img" if @article.cover_image.attached?%>
+    <div class="article-titre">
+      <div class="container">
+        <h1><%= @article.titre %></h1>
+      </div>
+    </div>
+  </div>
 
 <div class="container">
-
-
-  <h1><%= @article.titre %></h1>
 
   <p><%= @article.publication_date %></p>
 
@@ -17,8 +22,8 @@
   </p>
 
   <% if user_signed_in? %>
-    <%= link_to "Modifier cet article", edit_article_path(@article)%>
-    <%= link_to "Supprimer cet article", @article, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+    <%= link_to "Modifier cet article", edit_article_path(@article), class:"btn btn-outline-primary border-radius-l" %>
+    <%= link_to "Supprimer cet article", @article, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn btn-outline-danger border-radius-l"  %>
   <% end %>
 
 

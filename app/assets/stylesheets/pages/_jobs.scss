@@ -1,4 +1,17 @@
+.jobs-intro img{
+  height: 550px;
+  object-fit: cover;
+  object-position: top;
+  overflow: hidden;
+  width: 100%;
+  opacity: 0.5;
+}
+.jobs-intro {
+    background-image:
+    linear-gradient(to bottom, rgba(9, 17, 87, 1), rgba(10, 24, 145, 1));
+}
+
 .job-offer-resume{
   position: sticky;
-  top:30px;
+  top:130px;
 }

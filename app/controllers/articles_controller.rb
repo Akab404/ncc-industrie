@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
     if user_signed_in?
       @articles = Article.all
     else
-      @articles = Article.where("publication_date <= ?", Time.now)
+      @articles = Article.where(publish: true).where("publication_date <= ?", Time.now)
     end
   end
 
@@ -51,6 +51,6 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:titre, :cover_image, :content, :publication_date, :category, photos: [])
+    params.require(:article).permit(:titre, :cover_image, :content, :publication_date, :category, :publish, photos: [])
   end
 end

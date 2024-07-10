@@ -16,4 +16,11 @@ $headers-font: "Raleway", "Helvetica", "sans-serif";
 // $my-font: "Font Name";
 
 
-h2{ font-family: $headers-font;font-weight: 500; font-size: calc( $font-size-base * 10) !important;}
+h2{
+  font-family: $headers-font;
+  font-weight: 500;
+  font-size: calc( $font-size-base * 10) !important;
+}
+.border-radius-l{
+  border-radius: 1.5rem !important;
+}

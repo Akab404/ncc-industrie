@@ -3,6 +3,11 @@
   padding-bottom: 0;
   padding-top:0;
   height:100px;
+  transition: all 700ms ease-out;
+  position: sticky;
+  top:0;
+  left:0;
+  z-index: 99999;
 }
 .navbar-collapse{
   height:100%;
@@ -64,4 +69,10 @@
   to{
     transform: scaleX(100%);
   }
+}
+
+
+
+.scroll-down{
+  transform: translate3d(0, -100%, 0);
 }

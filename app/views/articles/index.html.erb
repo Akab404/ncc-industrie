@@ -1,23 +1,31 @@
 <div class="container">
-  <h1>Articles list</h1>
+  <h1>Nos actualités</h1>
 
-    <div class="card-article">
-      <div class="titre-article">
+     <div class="row gx-3">
         <% @articles.each do |article| %>
-          <%= link_to article_path(article), class: "card-article-link" do %>
-            <div class="card-article-content">
-              <p><%= cl_image_tag article.cover_image.key if article.cover_image.attached? %></p>
-              <p><%= article.titre %></p>
-              <p><%= article.publication_date  %></p>
-            </div>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
+          <div class="bloc-post col-12 col-lg-4">
+              <div class="post-card <%= article.publish ? 'post-published' : 'post-unpublished' %>">
+                <%= link_to article_path(article), class: "card-article-link" do %>
+                  <%= cl_image_tag article.cover_image.key, class:"cover-image" if article.cover_image.attached?%>
+                  <% if !article.publish? %>
+                    <p class="card-article-publish-alert">Article non publié</p>
+                  <% end %>
+                  <div class="card-article-content">
+                    <div class="card-article-category"><%= article.category %></div>
+                    <h3 class="mt-5"><%= article.titre %></h3>
+                    <p>Publié le <%= article.publication_date  %></p>
+                    <p class="mb-3">Morbi sapien metus, volutpat nec sollicitudin sit amet, auctor eu urna. Morbi eget tempor velit. Donec tempus sem sed sagittis tristique. Vivamus pulvinar sem et mollis facilisis. Morbi sed augue risus. Integer a nibh ullamcorper tortor mattis dignissim.</p>
+                    <%= render "shared/cta_secondary" %>
+                  </div>
+                <% end %>
+              </div>
 
+          </div>
+        <% end %>
+    </div>
     <% if user_signed_in? %>
-      <%= link_to new_article_path, class:"ncc-cta" do%>
-        Ajouter un nouvel article <span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>
+      <%= link_to new_article_path, class:"btn btn-outline-primary border-radius-l" do%>
+        Ajouter un nouvel article
       <% end%>
     <% end%>
 </div>

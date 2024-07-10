@@ -40,9 +40,9 @@
       <div class="row">
         <div class="bloc-expertise-content col-12 col-lg-5">
           <h2>Recherche</h2>
-          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.
+          <p>À la pointe de l'innovation, nous développons et validons des modèles de calcul par éléments finis en corrélation avec des essais expérimentaux.
           <br/><br/>
-          De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          Que ce soit pour étudier les effets du séisme, les variations thermiques ou les impacts, notre équipe pluridisciplinaire garantit des solutions de recherche de pointe pour répondre aux questions les plus complexes.</p>
           <%= render "shared/cta_primary" %>
         </div>
         <div class="col-lg-1"></div>
@@ -61,9 +61,9 @@
 
         <div class="bloc-expertise-content col-12 col-lg-5">
           <h2>Programmation</h2>
-          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.
+          <p>Nous concevons des logiciels métier sur mesure pour fiabiliser vos résultats et optimiser vos processus.
           <br/><br/>
-          De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          Notre approche personnalisée assure une intégration fluide de la technologie dans vos opérations, offrant une efficacité accrue et une réduction des risques.</p>
           <%= render "shared/cta_primary" %>
         </div>
       </div>
@@ -73,9 +73,9 @@
       <div class="row">
         <div class="bloc-expertise-content col-12 col-lg-5">
           <h2>Qualification</h2>
-          <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.
+          <p>Nos études comparatives entre les essais réels et les modèles de calcul garantissent une validation rigoureuse de vos processus et de vos installations.
           <br/><br/>
-          De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
+          Nous fournissons une analyse détaillée pour garantir la conformité réglementaire et la sécurité de vos opérations.</p>
           <%= render "shared/cta_primary" %>
         </div>
                 <div class="col-lg-1"></div>
@@ -92,7 +92,6 @@
 
   <div class="home-bloc-actualites">
     <h1>Nos dernières actualités :</h1>
-      <ul>
     <div class="row gx-3">
         <% @articles.each do |article| %>
           <div class="bloc-post col-12 col-lg-4">
@@ -104,9 +103,7 @@
                     <h3 class="mt-5"><%= article.titre %></h3>
                     <p>Publié le <%= article.publication_date  %></p>
                     <p class="mb-3">Morbi sapien metus, volutpat nec sollicitudin sit amet, auctor eu urna. Morbi eget tempor velit. Donec tempus sem sed sagittis tristique. Vivamus pulvinar sem et mollis facilisis. Morbi sed augue risus. Integer a nibh ullamcorper tortor mattis dignissim.</p>
-                    <div class="ncc-cta col-7 mb-3">
-                      Lire la suite <span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>
-                    </div>
+                    <%= render "shared/cta_secondary" %>
                   </div>
                 <% end %>
               </div>
@@ -114,7 +111,6 @@
           </div>
         <% end %>
     </div>
-      </ul>
   </div>
 
 

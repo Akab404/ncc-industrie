@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @articles = Article.where("publication_date <= ?", Time.now).order(publication_date: :desc)[0..2]
+    @articles = Article.where(publish: true).where("publication_date <= ?", Time.now).order(publication_date: :desc)[0..2]
 
   end
 

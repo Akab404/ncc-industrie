@@ -6,7 +6,31 @@
   border: solid 2px rgb(10,24,145);
   background: rgb(10,24,145);
   background: linear-gradient(45deg, rgba(10,24,145,1) 0%, rgba(9,17,97,1) 100%);
-  transition: all 0.4s cubic-bezier(0.75, 0, 0.30, 1) ;
+  transition: all 0.4s $cubic-bezier ;
+
+}
+.ncc-cta-secondary{
+  padding: 8px 40px;
+  color:rgb(10,24,145);;
+  font-size: 16px;
+  border-radius: 36px;
+  border: solid 2px rgb(10,24,145);
+  background: white;
+  transition: all 0.4s $cubic-bezier ;
+
+  .right-arrow i{
+  color:rgb(10,24,145);
+  background-color: rgb(10,24,145);;
+  border-radius: 50%;
+  box-sizing: border-box;
+  height: 20px;
+  text-align: center;
+  width: 20px;
+  font-size: 18px;
+  margin-left: 15px;
+  transform: scale(0.2) rotate(-45deg);
+  transition: all 0.8s $cubic-bezier ;
+}
 
 }
 .ncc-cta:hover{
@@ -35,7 +59,23 @@
   font-size: 18px;
   margin-left: 15px;
   transform: scale(0.2) rotate(-45deg);
-  transition: all 0.8s cubic-bezier(0.75, 0, 0.30, 1) ;
+  transition: all 0.8s $cubic-bezier ;
 }
 
 a{text-decoration: none;}
+
+.ncc-cta-secondary:hover{
+  background:rgb(10,24,145);
+  color: white;
+  border: solid 2px rgb(10,24,145);
+  box-shadow: rgba(175, 114, 216, 0.3) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+.ncc-cta-secondary:hover i{
+  transform: rotate(0) scale(1);
+  color: rgb(10, 24, 145);
+  background-color: white;
+  font-size: 10px;
+  padding: 5px;
+  margin-left: 30px;
+}

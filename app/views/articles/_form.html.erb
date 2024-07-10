@@ -13,6 +13,8 @@
                 input_html: { data: { controller: "datepicker" } } %>
     <%= f.input :category, collection:Article::CATEGORY %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+    <%= f.input :publish %>
+
     <%= f.button :submit,
                   "Créer l'article",
                   class:'ncc-cta' %>
