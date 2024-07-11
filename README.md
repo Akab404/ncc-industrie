@@ -1,6 +1,3 @@
-Bien sûr, je vais vous aider à rédiger un fichier README pour votre dépôt GitHub. Voici un exemple de ce à quoi il pourrait ressembler :
-
----
 
 # NCC Industrie - Bureau d'Études Nucléaire
 
