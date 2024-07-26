@@ -7,9 +7,9 @@
         <%= render "shared/screw" %>
       </div>
       <div class="hero-text-section">
-        <h3>NCC // Nucléaire  Conception Calculs</h3>
-        <h1>Calculs spécialisées</h1>
-        <p>Nous sommes dédiés à fournir des services hautement spécialisés dans les domaines de l'INDUSTRIE, de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
+        <h3>NCC // Nucléaire  Conception & Calculs</h3>
+        <h1>Flexibilité & Qualité</h1>
+        <p>Flexibilité & Qualité au service de la Sûreté. Spécialisés dans les domaines de l'INDUSTRIE, de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
       </div>
     </div>
 
@@ -97,7 +97,7 @@
           <div class="bloc-post col-12 col-lg-4">
               <div class="post-card">
                 <%= link_to article_path(article), class: "card-article-link" do %>
-                  <%= cl_image_tag article.cover_image.key, class:"cover-image" if article.cover_image.attached?%>
+                  <div class="overflow-hidden"><%= cl_image_tag article.cover_image.key, class:"cover-image" if article.cover_image.attached?%></div>
                   <div class="card-article-content">
                     <div class="card-article-category"><%= article.category %></div>
                     <h3 class="mt-5"><%= article.titre %></h3>

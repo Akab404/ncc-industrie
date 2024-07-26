@@ -11,6 +11,12 @@ export default class extends Controller {
       breakOnReturn: true,
       group: false
     }
+    Trix.config.blockAttributes.heading3 = {
+      tagName: 'h3',
+      terminal: true,
+      breakOnReturn: true,
+      group: false
+    }
   }
 
   initialize() {

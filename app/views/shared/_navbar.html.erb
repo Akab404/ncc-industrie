@@ -28,10 +28,12 @@
         </span>
           </a>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Industries</a>
-            <a class="dropdown-item" href="#">Recherche</a>
-            <a class="dropdown-item" href="#">Programmation</a>
-            <a class="dropdown-item" href="#">Qualification</a>
+
+            <%= link_to "Industrie", expertises_industrie_path, class: "dropdown-item" %>
+            <%= link_to "Recherche", expertises_recherche_path, class: "dropdown-item" %>
+            <%= link_to "Programmation", expertises_programmation_path, class: "dropdown-item" %>
+            <%= link_to "Qualification", expertises_qualification_path, class: "dropdown-item" %>
+
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Contact</a>
           </div>

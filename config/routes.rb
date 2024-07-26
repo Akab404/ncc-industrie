@@ -1,7 +1,14 @@
 Rails.application.routes.draw do
   devise_for :users
+
   root to: "pages#home"
+
   get "admin", to: "pages#admin"
+
+  get "expertises/industrie", to: "pages#expertises"
+  get "expertises/recherche", to: "pages#expertises"
+  get "expertises/programmation", to: "pages#expertises"
+  get "expertises/qualification", to: "pages#expertises"
 
   resources :job_offers
 

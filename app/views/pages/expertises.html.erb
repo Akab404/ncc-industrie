@@ -1,0 +1,83 @@
+<div class="hero-edito">
+  <div class="container">
+    <div class="d-flex align-items-center gap-3">
+      <%= render "shared/screw" %>
+      <h1>Nos Expertises</h1>
+    </div>
+      <div class="row justify-content-center">
+        <div class="hero-info-edito col-10">
+          <% if current_page?(expertises_industrie_path) %>
+            <h2>Industrie</h2>
+            <p>Nous sommes dédiés à fournir des services hautement spécialisés dans les domaines de l'INDUSTRIE,<br/>de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
+          <% end %>
+          <% if current_page?(expertises_recherche_path) %>
+            <h2>Recherche</h2>
+            <p>Ipsum</p>
+          <% end %>
+          <% if current_page?(expertises_programmation_path) %>
+            <h2>Programmation</h2>
+            <p>Lorem</p>
+          <% end %>
+          <% if current_page?(expertises_qualification_path) %>
+            <h2>Qualification</h2>
+            <p>Dolor</p>
+          <% end %>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="container">
+  <% if current_page?(expertises_industrie_path) %>
+  <h3 class="my-5">Industries : des situations complexes</h3>
+  <div class="row">
+    <div class="content col-12 col-lg-6">
+
+      <p class="fw-bold">À la pointe de l'innovation, nous développons et validons des modèles de calcul par éléments finis en corrélation avec des essais expérimentaux.</p>
+      <p>Que ce soit pour étudier les effets du séisme, les variations thermiques ou les impacts, notre équipe pluridisciplinaire garantit des solutions de recherche de pointe
+        pour répondre aux questions les plus complexes.
+      </p>
+      <p>Nous pouvons vous aider à différents niveaux :</p>
+      <ul>
+        <li><span class="fw-bold">Conception</span> d’une structure neuve avec des difficultés liées aux choix des paramètres du projet,
+        ou à la complexité architecturale, au calcul de la réponse sismique,
+        à l’interprétation des résultats, à l’optimisation du ferraillage
+        et des dispositions constructives.
+        </li>
+        <li><span class="fw-bold">Réévaluation</span> de la tenue sismique d’un bâtiment, d’un ouvrage d’art, d’un équipement (grue, pont roulant, racks, appareil industriel, etc.).</li>
+        <li><span class="fw-bold">Diagnostic</span> d’un bâti existant comportant des malfaçons (contentieux) selon les méthodes les plus adaptées
+        (modale spectrale, statique équivalent, pushover, transitoire linéaire ou non-linéaire).</li>
+        <li><span class="fw-bold">Développement, justification ou certification</span> (ATEX ou ATec) de nouveaux produits, matériels ou procédés de construction
+        (rupteur de pont thermique, habillage de façade, béton léger, béton ultra haute performance)</li>
+      </ul>
+
+    </div>
+    <div class="content col-12 col-lg-6">
+      <img src="https://res.cloudinary.com/dic3crqze/image/upload/v1720772337/development/p62d5lbf7t6gvurczpxamnhibpgv.png" alt="Expertise industriel ">
+    </div>
+  </div>
+  <h3 class="mt-5">Nos spécificités</h3>
+  <div class="row gx-5">
+    <div class="bloc-specificites col-12 col-lg-3">
+      <div class="svg">
+        <%= render "shared/svg/measure" %>
+      </div>
+      <h3>Mesures</h3>
+      <p>Que ce soit pour étudier les effets du séisme, les variations thermiques ou les impacts.</p>
+    </div>
+    <div class="bloc-specificites col-12 col-lg-3">
+      <div class="svg">
+        <%= render "shared/svg/calculs" %>
+      </div>
+      <h3>Calculs</h3>
+      <p>Que ce soit pour étudier les effets du séisme, les variations thermiques ou les impacts.</p>
+    </div>
+    <div class="bloc-specificites col-12 col-lg-3">
+      <div class="svg">
+        <%= render "shared/svg/charts" %>
+      </div>
+      <h3>Projection</h3>
+      <p>Que ce soit pour étudier les effets du séisme, les variations thermiques ou les impacts.</p>
+    </div>
+  </div>
+  <% end %>
+</div>
