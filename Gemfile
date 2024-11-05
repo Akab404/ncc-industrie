@@ -35,6 +35,9 @@ gem "cloudinary"
 #URL REwriting
 gem 'friendly_id', '~> 5.5.0'
 
+#MailForm
+gem 'mail_form'
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 

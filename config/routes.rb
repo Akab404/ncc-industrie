@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
   resources :projects
 
+  resources :contacts, only: [:new, :create]
+
   resources :articles do
     resource :cover_image, only: [:destroy], module: :articles
   end
