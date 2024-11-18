@@ -71,6 +71,17 @@ Rails.application.configure do
   # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "ncc_industrie_production"
 
+
+  ActionMailer::Base.smtp_settings = {
+  :port           => ENV['MAILGUN_SMTP_PORT'],
+  :address        => ENV['MAILGUN_SMTP_SERVER'],
+  :user_name      => ENV['MAILGUN_SMTP_LOGIN'],
+  :password       => ENV['MAILGUN_SMTP_PASSWORD'],
+  :domain         => 'https://ncc-application-website-72aa43d30acb.herokuapp.com/', # UPDATE THIS VALUE WITH YOUR OWN APP
+  :authentication => :plain,
+  }
+  ActionMailer::Base.delivery_method = :smtp
+
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
