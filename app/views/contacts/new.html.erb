@@ -1,23 +1,35 @@
 <div class="container">
-  <h1>Contact Form</h1>
-  <%= simple_form_for @contact do |f| %>
-    <div class="col-md-6">
-      <%= f.label :name %></br>
-      <%= f.text_field  :name, required: true, class: "contact-form-text-area" %></br>
-
-      <%= f.label :email %></br>
-      <%= f.text_field :email, required: true, class: "contact-form-text-area" %></br>
-
-      <%= f.label :message %></br>
-      <%= f.text_area :message, rows: 8, cols: 40, required: true, class: "contact-form-text-area",
-            placeholder: "Send me a message"%></br>
-
-      <div class= "d-none">
-        <%= f.label :nickname %>
-        <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+  <h1>Contactez-nous</h1>
+  <div class="global-form" data-controller="form">
+    <%= simple_form_for @contact do |f| %>
+      <div class="form-inputs mt-4">
+        <div class="col-8 col-lg-6">
+          <%= f.input :name,
+                  required: true,
+                  label:"Nom",
+                  autofocus: true,
+                  error: "Veuillez remplir ce champ" %>
+          <%= f.input :email,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "email" },
+                  error: "Veuillez vérifier votre email" %>
+        </div>
+        <div class="col-10">
+          <%= f.input :message,
+                  :as => :text,
+                  :input_html => { 'rows' => 10},
+                  required: true,
+                  autofocus: true,
+                  error: "Veuillez renseigner un message s'il vous plait" %>
+          <div class= "d-none">
+            <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
+          </div>
+        </div>
+          <%= f.submit 'Envoyer le message',
+          class: 'btn ncc-cta' %>
+        </div>
       </div>
-
-      <%= f.submit 'Send Message', class: 'btn btn-primary' %>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

@@ -35,7 +35,8 @@
             <%= link_to "Qualification", expertises_qualification_path, class: "dropdown-item" %>
 
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Contact</a>
+            <%= link_to "Contact", new_contact_path, class: "dropdown-item" %>
+            <%# <a class="dropdown-item" href="#">Contact</a> %>
           </div>
         </li>
         <% if user_signed_in? %>
@@ -65,8 +66,10 @@ Log out</span>
         <% end %>
       </ul>
 
-      <div class="ncc-cta">
-      Contact <span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>
-      </div>
+      <%= link_to new_contact_path do %>
+        <div class="ncc-cta">
+        Contact <span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>
+        </div>
+      <% end %>
     </div>
   </nav>

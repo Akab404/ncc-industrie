@@ -7,11 +7,14 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(params[:contact])
     @contact.request = request
+    # raise
     if @contact.deliver
-      flash.now[:success] = "Message envoyé avec succès !"
+      redirect_to root_path, status: :created
+
+      # raise
     else
-      flash.now[:error] = "Impossible d'envoyer le message"
-      render:new
+      render :new, status: :unprocessable_entity
     end
   end
+
 end

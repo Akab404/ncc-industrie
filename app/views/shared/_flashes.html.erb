@@ -13,3 +13,8 @@
     </button>
   </div>
 <% end %>
+
+
+<% flash.each do |key, message| %>
+    <p class="alert alert-danger alert-dismissible fade show m-1 alert-<%= key %>"><%= message %></p>
+  <% end %>

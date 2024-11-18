@@ -6,12 +6,10 @@ export default class extends Controller {
   lastScroll = 0
 
   connect() {
-    console.log("hello from stickynav controller");
   }
 
   scrollsticky() {
     const navbar = document.querySelector(".navbar");
-    console.log(this.lastScroll);
     const currentScroll = window.scrollY;
 
     if (currentScroll <= 0 ) {
