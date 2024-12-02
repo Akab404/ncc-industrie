@@ -5,12 +5,14 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   lastScroll = 0
 
+
   connect() {
   }
 
   scrollsticky() {
     const navbar = document.querySelector(".navbar");
     const currentScroll = window.scrollY;
+
 
     if (currentScroll <= 0 ) {
       navbar.classList.remove("scroll-up")

@@ -1,9 +1,36 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
-// Connects to data-controller="form"
+// Connectez ce controller aux éléments HTML.
 export default class extends Controller {
   connect() {
+    // Initialisez Splide lorsque le controller est monté.
+    this.splide = new Splide(this.element, {
+      type:'loop',
+      perPage:4,
+      focus:0,
+      arrows : false,
+      pagination : false,
+      autoplay : true,
+      pauseOnHover : false,
+      gap : "8%",
+      breakpoints : {
+        1400:{
+          perPage:3,
+        },
+        991:{
+          perPage:2,
+        },
+      }
+    });
 
-    console.log("hello from form controller");
+    this.splide.mount();
+
+  }
+
+  disconnect() {
+    // Détruisez Splide lorsque le controller est démonté.
+    if (this.splide) {
+      this.splide.destroy();
+    }
   }
 }

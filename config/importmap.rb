@@ -10,3 +10,4 @@ pin "@popperjs/core", to: "popper.js", preload: true
 pin "trix"
 pin "@rails/actiontext", to: "actiontext.esm.js"
 pin "flatpickr" # @4.6.13
+pin "jquery", to: "https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.js"

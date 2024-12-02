@@ -16,20 +16,26 @@
 <div class="container">
   <div class="row">
 
-   <div class="card-job col-12 col-lg-6">
-      <div class="titre-job">
-
-          <% @offers.each do |offer| %>
-            <%= link_to job_offer_path(offer), class: "card-offer-link" do %>
-              <div class="card-article-content">
-                <h3><%= offer.titre %></h3>
-                <span>Publié le 26/06/2024</span>
+   <div class=" col-12 col-lg-6">
+     <div class="card-job">
+        <div class="titre-job">
+            <% @offers.each do |offer| %>
+              <%= link_to job_offer_path(offer), class: "card-offer-link" do %>
+                <div class="card-article-content">
+                  <h3><%= offer.titre %></h3>
+                  <span>Publié le 26/06/2024</span>
+                </div>
+                <div>
+                  <div class="ncc-cta cta-w">
+                    En savoir plus <span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>
+                  </div>
               </div>
-            <% end %>
-          <% end %>
 
+              <% end %>
+            <% end %>
+        </div>
       </div>
-    </div>
+   </div>
   </div>
-  <%= link_to "Ajouter une offre d'emploi", new_job_offer_path, class:"btn btn-outline-primary border-radius-l" if user_signed_in? %>
+  <div class="mt-4"><%= link_to "Ajouter une offre d'emploi", new_job_offer_path, class:"btn btn-outline-primary border-radius-l px-4" if user_signed_in? %></div>
 </div>

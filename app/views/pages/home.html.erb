@@ -1,20 +1,60 @@
 
 <div class="hero-section">
-  <div class="hero-background">
+ <%#  <div class="hero-background">
     <div class="container">
       <div class="screws">
-        <%= render "shared/screw" %>
-        <%= render "shared/screw" %>
       </div>
-      <div class="hero-text-section">
+      <div class="hero-text-section" data-controller="form">
         <h3>NCC // Nucléaire  Conception & Calculs</h3>
         <h1>Flexibilité & Qualité</h1>
         <p>Flexibilité & Qualité au service de la Sûreté. Spécialisés dans les domaines de l'INDUSTRIE, de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
+        <div class="circle-tracked" data-form-target="circle"></div>
+      </div>
+    </div> %>
+
+<div data-controller="grid" class="dot-canva-grid position-relative">
+  <canvas data-grid-target="canvas" data-action="mousemove->grid#onMouseMove"></canvas>
+    <div class="hero-infos">
+      <div class="container">
+        <div class="screws">
+          <%= render "shared/screw" %>
+          <%= render "shared/screw" %>
+        </div>
+        <div class="hero-text-section">
+          <h3>NCC // Nucléaire  Conception & Calculs</h3>
+          <h1>Flexibilité & Qualité</h1>
+          <p>Flexibilité & Qualité au service de la Sûreté. Spécialisés dans les domaines de l'INDUSTRIE, de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
+        </div>
       </div>
     </div>
 
+</div>
   </div>
 </div>
+<section class="splide-section">
+  <div class="container">
+    <h2>Ils nous font confiance</h2>
+    <section data-controller="form" class="splide" aria-label="Splide logo partenaires">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740783/logo-erdf_btu7zw.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740783/logo-dalkia_xcuvhm.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740783/logo-cea_jb8ctj.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740783/logo-axima_owcdu6.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740784/logo-framatome_roucke.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740784/logo-inep_eaym6z.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740784/logo-cyclife_zoi6gp.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740784/logo-spie_ntciiy.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740784/logo-orano_fhzdvm.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740784/logo-sneff_esongj.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740784/logo-fivesnordon_j1ivmn.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740785/logo-tunzini_dn8b9c.png" alt="" class="w-100"></li>
+          <li class="splide__slide"><img src="https://res.cloudinary.com/dic3crqze/image/upload/v1732740783/logo-cegelec_gds6xq.png" alt="" class="w-100" ></li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</section>
 <div class="blocs-expertise">
   <div class="container">
 
