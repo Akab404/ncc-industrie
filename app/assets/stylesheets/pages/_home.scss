@@ -1,29 +1,4 @@
 // Specific CSS for your home-page
-@media screen and (max-width : 991px) {
-  .navbar-nav{
-    display: flex;
-    flex-direction: column;
-    width:100%;
-    background-color: white;
-    height: 100% !important;
-  }
-  .navbar{
-    padding: 35px 0;
-    height: 100% !important;
-  }
-  .nav-link{
-      padding: 15px 25px;
-  }
-  .navbar-collapse{
-     display: flex;
-    flex-direction: column;
-  }
-  .bloc-expertise-image{
-    margin-bottom:35px;
-  }
-
-}
-
 
 .hero-section{
   background-image:
@@ -163,8 +138,21 @@
   background: white;
   padding: 60px 0;
 }
+  .home-bloc-actualites h1{
+    margin-bottom: 24px;
+  }
 @keyframes parallax{
   to {
     transform: translateY(calc(var(--parallax-speed) * 200px));
   }
+}
+@media screen and (max-width : 991px) {
+
+  .bloc-expertise-content p {
+    padding: 12px 0;
+}
+  .bloc-expertise-image{
+    margin-bottom:35px;
+  }
+
 }

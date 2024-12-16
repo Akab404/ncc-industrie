@@ -9,6 +9,9 @@
   left:0;
   z-index: 99999;
 }
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
 .navbar-collapse{
   height:100%;
 }
@@ -61,6 +64,36 @@
 .nav-link:hover:after{
       animation: border-transform 0.8s cubic-bezier(0.62, 0.00, 0.38, 1) 0s normal both;
 
+}
+
+@media screen and (max-width:992px) {
+  .btn-menu-navbar{
+    margin-left: 25px;
+    margin-top:24px;
+  }
+  .dropdown-menu {
+    margin: 0 25px;
+  }
+  .navbar-nav{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  background-color: white;
+  height: 100% !important;
+  gap:12px !important;
+  margin-top:24px;
+  }
+  .navbar{
+    padding: 35px 0;
+    height: 100% !important;
+  }
+  .nav-link{
+      padding: 15px 25px;
+  }
+  .navbar-collapse{
+     display: flex;
+    flex-direction: column;
+  }
 }
 
 @keyframes border-transform {

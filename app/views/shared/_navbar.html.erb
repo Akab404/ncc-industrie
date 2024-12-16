@@ -31,8 +31,8 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
             <%= link_to "Industrie", expertises_industrie_path, class: "dropdown-item" %>
-            <%= link_to "Recherche", expertises_recherche_path, class: "dropdown-item" %>
             <%= link_to "Programmation", expertises_programmation_path, class: "dropdown-item" %>
+            <%= link_to "Recherche", expertises_recherche_path, class: "dropdown-item" %>
             <%= link_to "Qualification", expertises_qualification_path, class: "dropdown-item" %>
             <div class="dropdown-divider"></div>
             <%= link_to "Contact", new_contact_path, class: "dropdown-item" %>
@@ -65,7 +65,7 @@ Log out</span>
 
         <% end %>
 
-        <li class="d-flex align-items-center">
+        <li class="d-flex align-items-center btn-menu-navbar">
           <%= link_to new_contact_path do %>
             <div class="ncc-cta">
             Contact <span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>
