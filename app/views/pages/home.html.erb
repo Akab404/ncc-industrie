@@ -1,24 +1,26 @@
 
 <div class="hero-section">
- <%#  <div class="hero-background">
+  <div class="hero-background">
     <div class="container">
       <div class="screws">
+                          <%= render "shared/screw" %>
+          <%= render "shared/screw" %>
       </div>
       <div class="hero-text-section" data-controller="form">
-        <h3>NCC // Nucléaire  Conception & Calculs</h3>
-        <h1>Flexibilité & Qualité</h1>
-        <p>Flexibilité & Qualité au service de la Sûreté. Spécialisés dans les domaines de l'INDUSTRIE, de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
-        <div class="circle-tracked" data-form-target="circle"></div>
-      </div>
-    </div> %>
 
-<div data-controller="grid" class="dot-canva-grid position-relative">
+        <h3>NCC // Nucléaire  Conception & Calculs</h3>
+        <h1>Flexibilité<br/>& Qualité</h1>
+        <p>Flexibilité & Qualité au service de la Sûreté. Spécialisés dans les domaines de l'INDUSTRIE,<br/> de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
+      </div>
+
+    </div>
+
+  <%# <div data-controller="grid" class="dot-canva-grid position-relative">
   <canvas data-grid-target="canvas" data-action="mousemove->grid#onMouseMove"></canvas>
     <div class="hero-infos">
       <div class="container">
         <div class="screws">
-          <%= render "shared/screw" %>
-          <%= render "shared/screw" %>
+
         </div>
         <div class="hero-text-section">
           <h3>NCC // Nucléaire  Conception & Calculs</h3>
@@ -27,7 +29,7 @@
         </div>
       </div>
     </div>
-
+ %>
 </div>
   </div>
 </div>
