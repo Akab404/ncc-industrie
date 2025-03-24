@@ -8,8 +8,8 @@
       </div>
       <div class="hero-text-section" data-controller="form">
 
-        <h3>NCC // Nucléaire  Conception & Calculs</h3>
-        <h1>Flexibilité<br/>& Qualité</h1>
+        <h3>Nucléaire  Conception & Calculs</h3>
+        <h1>Flexibilité & Qualité au service de la Sûreté</h1>
         <p>Flexibilité & Qualité au service de la Sûreté. Spécialisés dans les domaines de l'INDUSTRIE,<br/> de la RECHERCHE, de la PROGRAMMATION et de la QUALIFICATION.</p>
       </div>
 
@@ -72,8 +72,9 @@
           <p>Notre expertise en calculs thermiques, sismiques et autres domaines complexes assure des solutions de pointe pour les défis industriels les plus exigeants.
           <br/><br/>
           De la conception à la mise en œuvre, nous offrons une précision et une fiabilité inégalées pour optimiser les performances de vos installations et processus.</p>
-          <%= render "shared/cta_primary" %>
-
+          <%= link_to "/expertises/industrie" do %>
+            <%= render "shared/cta_primary" %>
+          <% end %>
         </div>
 
       </div>
@@ -85,8 +86,9 @@
           <p>Nous concevons des logiciels métier sur mesure pour fiabiliser vos résultats et optimiser vos processus.
           <br/><br/>
           Notre approche personnalisée assure une intégration fluide de la technologie dans vos opérations, offrant une efficacité accrue et une réduction des risques.</p>
-          <%= render "shared/cta_primary" %>
-        </div>
+          <%= link_to "/expertises/programmation" do %>
+            <%= render "shared/cta_primary" %>
+          <% end %>        </div>
         <div class="col-lg-1"></div>
         <div class="bloc-expertise-image col-12 col-lg-6 order-first order-lg-last">
           <img class="bloc-expertise-image-bckgrnd" src="https://res.cloudinary.com/dic3crqze/image/upload/v1720165912/programmation-gradient_acucs8.png">
@@ -107,8 +109,9 @@
           <p>À la pointe de l'innovation, nous développons et validons des modèles de calcul par éléments finis en corrélation avec des essais expérimentaux.
           <br/><br/>
           Que ce soit pour étudier les effets du séisme, les variations thermiques ou les impacts, notre équipe pluridisciplinaire garantit des solutions de recherche de pointe pour répondre aux questions les plus complexes.</p>
-          <%= render "shared/cta_primary" %>
-
+          <%= link_to "/expertises/recherche" do %>
+            <%= render "shared/cta_primary" %>
+          <% end %>
         </div>
       </div>
 
@@ -120,7 +123,9 @@
           <p>Nos études comparatives entre les essais réels et les modèles de calcul garantissent une validation rigoureuse de vos processus et de vos installations.
           <br/><br/>
           Nous fournissons une analyse détaillée pour garantir la conformité réglementaire et la sécurité de vos opérations.</p>
-          <%= render "shared/cta_primary" %>
+          <%= link_to "/expertises/qualification" do %>
+            <%= render "shared/cta_primary" %>
+          <% end %>
         </div>
                 <div class="col-lg-1"></div>
 
