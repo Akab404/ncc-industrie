@@ -1,0 +1,8 @@
+{
+  "name": "ncc-application-website",
+  "version": "1.0.0",
+  "engines": {
+    "node": "16.x",
+    "yarn": "1.x"
+  }
+}
