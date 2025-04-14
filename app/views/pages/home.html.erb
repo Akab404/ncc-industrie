@@ -157,7 +157,7 @@
                     <div class="card-article-category"><%= article.category %></div>
                     <h3 class="mt-5"><%= article.titre %></h3>
                     <p>Publié le <%= article.publication_date  %></p>
-                    <p class="mb-3">Morbi sapien metus, volutpat nec sollicitudin sit amet, auctor eu urna. Morbi eget tempor velit. Donec tempus sem sed sagittis tristique. Vivamus pulvinar sem et mollis facilisis. Morbi sed augue risus. Integer a nibh ullamcorper tortor mattis dignissim.</p>
+                    <p class="mb-3"><%= truncate(article.content.to_plain_text, length: 240, separator: ' ') %></p>
                     <%= render "shared/cta_secondary" %>
                   </div>
                 <% end %>
