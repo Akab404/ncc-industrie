@@ -12,5 +12,5 @@ class Article < ApplicationRecord
   validates :titre, presence: true
   validates :category, presence: true
 
-  CATEGORY = ["Sismique", "Etudes", "Certification", "Récompense"]
+  CATEGORY = ["Sismique", "Etudes", "Certification", "Récompense", "RSE"]
 end
