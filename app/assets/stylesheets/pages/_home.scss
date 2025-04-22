@@ -1,16 +1,14 @@
 // Specific CSS for your home-page
 
+.hero-background{
+  padding: 24px 0;;
+}
 .hero-section{
   background-image:
     linear-gradient(to bottom, rgba(9, 17, 87, 1), rgba(10, 24, 145, 1));
   width: 100%;
-  min-height:calc(90vh - 100px);
   background-size: cover;
   color:white;
-
-  --parallax-speed: -1.2;
-  animation: parallax linear;
-  animation-timeline: scroll();
 
 }
 .z-index-20{
@@ -19,20 +17,18 @@
 
 .hero-section h1{
   font-weight: 400;
-  font-size: clamp(2.5rem, 3.5vw, 5rem);
+  font-size: 2.5rem;
   line-height: 1.2;
   text-transform: uppercase;
   line-height: 100%;
-  margin-top: 100px;
 }
 .hero-section h3{
   font-weight: 200;
-  font-size: 2.5rem;
-  // text-transform: capitalize;
-  padding: 43px 0;
+  font-size: 1.8rem;
+  text-align: right;
 }
 .hero-background{
-  background-image:  url("https://res.cloudinary.com/dic3crqze/image/upload/v1744662369/Calque_1_kqfdmj.jpg");
+  background-image:  url("https://res.cloudinary.com/dic3crqze/image/upload/v1745352338/test1_dsxcgf.jpg");
   background-size: 100%;
   width: 100%;
   height:100%;
@@ -54,15 +50,13 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-.hero-text-section{
-  --parallax-speed : -10;
-    animation: parallax linear;
-  animation-timeline: scroll();
-  padding:0 10% 16% 10%;
+.intro-txt{
+  text-align: center;
+  font-size: 1.2rem;
 }
 .hero-text-section p{
-  margin-top: 75px;
-  font-size: 1.5rem;
+  margin-top: 40px;
+  font-size: 1.2rem;
 }
 .dot-canva-grid{
   position: relative;
