@@ -20,7 +20,7 @@
             <span>Nous Rejoindre</span>
           <% end %>
         </li>
-        <li class="nav-item dropdown">
+        <%# <li class="nav-item dropdown">
           <a class="nav-link" href="javascript:" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="d-flex align-items-center gap-3 menu-dropdown">
             Nos expertises <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 25 25" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -31,13 +31,13 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
             <%= link_to "Industrie", expertises_industrie_path, class: "dropdown-item" %>
-            <%= link_to "Programmation", expertises_programmation_path, class: "dropdown-item" %>
-            <%= link_to "Recherche", expertises_recherche_path, class: "dropdown-item" %>
-            <%= link_to "Qualification", expertises_qualification_path, class: "dropdown-item" %>
-            <div class="dropdown-divider"></div>
-            <%= link_to "Contact", new_contact_path, class: "dropdown-item" %>
+            <%# <%= link_to "Programmation", expertises_programmation_path, class: "dropdown-item" %>
+            <%# <%= link_to "Recherche", expertises_recherche_path, class: "dropdown-item" %>
+            <%# <%= link_to "Qualification", expertises_qualification_path, class: "dropdown-item" %>
+            <%# <div class="dropdown-divider"></div> %>
+            <%# <%= link_to "Contact", new_contact_path, class: "dropdown-item" %>
           </div>
-        </li>
+        <%# </li> %>
 
         <% if user_signed_in? %>
 

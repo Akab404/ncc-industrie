@@ -1,7 +1,7 @@
 <div class="container">
   <h1>Nos actualités</h1>
 
-     <div class="row gx-3">
+     <div class="row g-3">
         <% @articles.each do |article| %>
           <div class="bloc-post col-12 col-lg-4">
               <div class="post-card <%= article.publish ? 'post-published' : 'post-unpublished' %>">
