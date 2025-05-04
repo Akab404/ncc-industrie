@@ -5,6 +5,10 @@
   border-bottom-right-radius :$border-radius-xl;
   position:relative;
   color: $gray;
+  height: 39%;
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
 }
 .cover-image{
   width:100%;
@@ -23,7 +27,7 @@
   overflow: hidden;
   background-color: white;
   position: relative;
-
+  height:100%;
 
 }
 
@@ -44,9 +48,7 @@
   color:$blue;
 }
 
-.bloc-post{
-  margin-bottom:1rem;
-}
+
 .post-unpublished{
   background-color: #EBEBEB;
 }
