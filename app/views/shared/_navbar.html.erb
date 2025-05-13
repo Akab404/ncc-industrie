@@ -36,7 +36,7 @@
             <%# <%= link_to "Qualification", expertises_qualification_path, class: "dropdown-item" %>
             <%# <div class="dropdown-divider"></div> %>
             <%# <%= link_to "Contact", new_contact_path, class: "dropdown-item" %>
-          </div>
+          <%# </div> %>
         <%# </li> %>
 
         <% if user_signed_in? %>
@@ -52,26 +52,28 @@
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Ajouter une actualité", new_article_path, class: "dropdown-item" %>
               <%= link_to "Ajouter une offre d'emploi", new_job_offer_path, class: "dropdown-item" %>
-              <div class="dropdown-divider"></div>
-
+                <div class="dropdown-divider"></div>
               <%= link_to destroy_user_session_path, data: {turbo_method: :delete}, class: "dropdown-item" do %>
-                <span class="logout-btn"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
-  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
-</svg>
-Log out</span>
+                <span class="logout-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15m-3 0-3-3m0 0 3-3m-3 3H15" />
+                  </svg>
+                  Log out
+                </span>
               <% end %>
             </div>
           </li>
 
         <% end %>
 
-        <li class="d-flex align-items-center btn-menu-navbar">
+        <li class="nav-item d-flex align-items-center btn-menu-navbar">
           <%= link_to new_contact_path do %>
             <div class="ncc-cta">
             Contact <span class="right-arrow"><i class="fa-solid fa-angle-right"></i></span>
             </div>
           <% end %>
         </li>
+
       </ul>
     </div>
   </nav>
