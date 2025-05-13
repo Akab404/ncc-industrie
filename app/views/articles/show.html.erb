@@ -10,9 +10,10 @@
 
 <div class="container">
 
-  <p><%= @article.publication_date %></p>
-
-  <p><%= @article.category %></p>
+  <div class="d-flex gap-3 align-items-center">
+    <p>Publié le <%= @article.publication_date %></p>
+    <p class="article-category"><%= @article.category %></p>
+  </div>
 
   <p><%= @article.content %></p>
 

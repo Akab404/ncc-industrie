@@ -31,3 +31,13 @@
   line-height: 1.2;
   margin-top:5vw;
 }
+
+.article-category{
+  box-shadow: $box-shadow;
+  border: 1px solid $blue;
+  background-color: white;
+  border-radius: $border-radius-xxl;
+  padding: 5px 15px;
+  color:$blue;
+  width:fit-content;
+}
