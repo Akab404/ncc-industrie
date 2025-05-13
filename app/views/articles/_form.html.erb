@@ -3,7 +3,7 @@
     <% if article.cover_image.attached? %>
     <div id="<%= dom_id(article, :cover_image) %>">
       <%= cl_image_tag article.cover_image.key%>
-      <%= link_to "Remove cover image", article_cover_image_path(article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+      <%= link_to "Remove cover image", article_cover_image_path(article), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class:"btn ncc-cta my-3"   %>
     </div>
     <% end %>
   <%= simple_form_for article do |f| %>
