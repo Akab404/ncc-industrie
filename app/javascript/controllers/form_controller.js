@@ -12,7 +12,9 @@ export default class extends Controller {
       pagination : false,
       autoplay : true,
       pauseOnHover : false,
+      speed : 500,
       gap : "8%",
+      interval : 1250,
       breakpoints : {
         1400:{
           perPage:3,
