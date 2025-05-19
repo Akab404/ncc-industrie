@@ -19,6 +19,22 @@
   transition: all 0.4s $cubic-bezier ;
   min-width:205px;
 
+  &:hover, .post-card:hover &{
+    background:rgb(10,24,145);
+    color: white;
+    border: solid 2px rgb(10,24,145);
+    box-shadow: rgba(175, 114, 216, 0.3) 0px 7px 29px 0px;
+    cursor: pointer;
+    i{
+      transform: rotate(0) scale(1);
+      color: rgb(10, 24, 145);
+      background-color: white;
+      font-size: 10px;
+      padding: 5px;
+      margin-left: 30px;
+    }
+  }
+
   .right-arrow i{
   color:rgb(10,24,145);
   background-color: rgb(10,24,145);;
@@ -65,13 +81,7 @@
 
 a{text-decoration: none;}
 
-.ncc-cta-secondary:hover{
-  background:rgb(10,24,145);
-  color: white;
-  border: solid 2px rgb(10,24,145);
-  box-shadow: rgba(175, 114, 216, 0.3) 0px 7px 29px 0px;
-  cursor: pointer;
-}
+
 .ncc-cta-secondary:hover i{
   transform: rotate(0) scale(1);
   color: rgb(10, 24, 145);
