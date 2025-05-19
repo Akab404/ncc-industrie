@@ -9,7 +9,8 @@ class Contact < MailForm::Base
   def headers
     {
       :subject => "Nouveau message depuis NCC Website",
-      :to => "contact@ncc-industrie.com",
+      to: ["contact@ncc-industrie.com", "rh@ncc-industrie.com"],
+      :cci => "florian.wagrez@gmail.com",
       :from => %("#{name}" <#{email}>)
     }
   end
