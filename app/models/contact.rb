@@ -11,7 +11,8 @@ class Contact < MailForm::Base
       :subject => "Nouveau message depuis NCC Website",
       to: ["contact@ncc-industrie.com", "rh@ncc-industrie.com"],
       :cci => "florian.wagrez@gmail.com",
-      :from => %("#{name}" <#{email}>)
+      :from => 'contact@ncc-industrie.com',
+      :reply_to => email
     }
   end
 end
