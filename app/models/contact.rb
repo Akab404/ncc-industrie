@@ -7,6 +7,7 @@ class Contact < MailForm::Base
   # Declare the e-mail headers. It accepts anything the mail method
   # in ActionMailer accepts.
   def headers
+    Rails.logger.info "→ Préparation de l'envoi de mail avec MailForm"
     {
       :subject => "Nouveau message depuis NCC Website",
       to: ["contact@ncc-industrie.com", "rh@ncc-industrie.com"],
