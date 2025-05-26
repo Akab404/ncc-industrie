@@ -71,6 +71,7 @@ config.active_storage.service = :cloudinary
   # config.active_job.queue_adapter = :resque
   # config.active_job.queue_name_prefix = "ncc_industrie_production"
 
+  ActionMailer::Base.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
   :port           => ENV['MAILGUN_SMTP_PORT'],
@@ -80,8 +81,13 @@ config.active_storage.service = :cloudinary
   :domain         => 'ncc-industrie.com', # UPDATE THIS VALUE WITH YOUR OWN APP
   :authentication => :plain,
   }
-  ActionMailer::Base.delivery_method = :smtp
 
+  config.action_mailer.default_url_options = {
+  host: 'ncc-application-website-72aa43d30acb.herokuapp.com',
+  protocol: 'https'
+}
+
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
