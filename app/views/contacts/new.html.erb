@@ -27,6 +27,7 @@
             <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
           </div>
         </div>
+          <%= recaptcha_tags %>
           <%= f.submit 'Envoyer le message',
           class: 'btn ncc-cta' %>
         </div>
