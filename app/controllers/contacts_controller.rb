@@ -8,14 +8,8 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.request = request
 
-    recaptcha_valid = verify_recaptcha(model: @contact)
-    deliver_success = recaptcha_valid && @contact.deliver
-
-    Rails.logger.debug "✅ CAPTCHA valid ? #{recaptcha_valid}"
-    Rails.logger.debug "✅ Envoi email ok ? #{@contact.deliver}"
-    Rails.logger.debug "❌ Erreurs : #{@contact.errors.full_messages}"
-
-    if deliver_success
+    if verify_recaptcha(model: @contact) && @contact.valid?
+      @contact.deliver
       flash[:notice] = "Votre message a bien été envoyé."
       redirect_to root_path, status: :see_other
     else
