@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     @contact = Contact.new(contact_params)
     @contact.request = request
 
-    if @contact.deliver
+    if verify_recaptcha(model: @contact) && @contact.deliver
       flash[:notice] = "Votre message a bien été envoyé."
       redirect_to root_path, status: :see_other
     else
