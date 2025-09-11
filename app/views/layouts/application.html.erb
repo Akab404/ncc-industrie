@@ -34,7 +34,7 @@ La force de notre société repose sur une équipe d’ingénieurs expérimenté
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
-
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfKM8YrAAAAAAP144qAwz4tnP1Rs7oMvuyePQUk"></script>
 
   </head>
 
@@ -47,7 +47,14 @@ La force de notre société repose sur une équipe d’ingénieurs expérimenté
 
     <%= render "shared/footer" %>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.enterprise.ready(async () => {
+          const token = await grecaptcha.enterprise.execute('6LfKM8YrAAAAAAP144qAwz4tnP1Rs7oMvuyePQUk', {action: 'LOGIN'});
+        });
+      }
+    </script>
 
 
   </body>
