@@ -27,6 +27,19 @@
             <%= f.text_field :nickname, :hint => 'Leave this field blank!' %>
           </div>
         </div>
+          <div class="">
+            <!-- Paragraphe affichant l'adresse en cas de pépin -->
+            <p id="contact-fallback">
+              En cas de difficultées, vous pouvez nous envoyer un mail en passant ici&nbsp;:
+              <span id="contact-mail">…</span>
+            </p>
+
+            <noscript>
+              <p>
+                En cas de difficultées, vous pouvez nous envoyer un mail en passant ici&nbsp;: contact [at] ncc-industrie [dot] com
+              </p>
+            </noscript>
+          </div>
           <%= recaptcha_tags %>
           <%= f.submit 'Envoyer le message',
           class: 'btn ncc-cta mt-3' %>
@@ -35,3 +48,33 @@
     <% end %>
   </div>
 </div>
+
+<script>
+  // email parts (modifie seulement ces valeurs si besoin)
+  (function(){
+    const user = "contact";
+    const domain = "ncc-industrie.com";
+    const email = user + "@" + domain;
+
+    // texte affiché (facultatif : transforme pour l'humain)
+    const humanText = `${user}@${domain}`;
+
+    // attributs mailto (optionnel : ajoute sujet ou corps par défaut)
+    const subject = encodeURIComponent("Demande depuis le site");
+    const body = encodeURIComponent("Bonjour,\n\nJe vous contacte au sujet de…\n");
+    const mailto = `mailto:${email}?subject=${subject}&body=${body}`;
+
+    // création du lien et insertion dans le DOM
+    const a = document.createElement("a");
+    a.href = mailto;
+    a.textContent = humanText;
+    a.rel = "noopener noreferrer";
+    a.setAttribute("aria-label", "Envoyer un email à " + humanText);
+
+    const target = document.getElementById("contact-mail");
+    if (target) {
+      target.textContent = " "; // espace propre avant le lien
+      target.appendChild(a);
+    }
+  })();
+</script>
